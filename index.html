@@ -1,264 +1,257 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-	<title>Performance Tire</title>
-        <style>
-        body {
-	margin: 0px;
+    <meta charset="utf-8" />
+    <title>Famille Matchuendem</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- À ajouter pour "injecter" notre fichier CSS -->
+    <style>
+   @keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
 }
-
-.container1 {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content:center;
-    margin-left: 45%;
-   /* float: left;*/
-    
+@-webkit-keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
 }
-
-h1 {
-	font-family: fantasy;
-	font-size: 3em;
-	border-bottom: 2px solid pink;
-	/*border-right: 2px solid pink;*/
-	width: 400px;
-	text-align: center;
-	-moz-box-shadow:4px 4px 5px #888888;
-	-ms-box-shadow: 4px 4px 5px #888888;
-	-webkit-box-shadow: 4px 4px 5px #888888;
-	-o-box-shadow: 4px 4px 5px #888888;
-	box-shadow: 4px 4px 5px #888888;
-	margin-top: 10px;
+@-moz-keyframes moveCloud {
+    0% {
+        transform: translate(1950px);
+    }
+    100% {
+        transform: translate(-50px);
+    }
+}
+        #contentCloud {
+    position: fixed;
+    width:100%;    
+    height: 160px;
+    background-image: linear-gradient(to bottom, #003966, #2b6287, #588da7, #8ab9c6, #c2e6e9);
+    border-bottom: solid 1px #999;
+    box-shadow: #bababa 0px 0px 5px;
+    font-weight: 900;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
     z-index: 1;
 }
-
-#montre {
-	width: 600px;
-	height: 400px;
-	margin: 10px;
-	transition: /*width 1s, height 1s;*/ all 3s;   /*vitesse du mouvement */
+    #sun {
+    position: absolute;
+    top: 2em;
+    left: 4em;
+    width: 3.5em;
+    height: 3.5em;
+    background-color : yellow;
+    border-radius: 50%;
+    border: 1px solid #FFFACD;
+    box-shadow: #FFFACD 0px 0px 100px 20px;
+}
+    #cloud1 {
+    z-index: 1;
+    position: absolute;
+    left:0px;
+    top:1.5em;
+    font-size: 2em;
+    color: #82d4e2;
+    animation: moveCloud 60s linear infinite;
+    -webkit-animation: moveCloud 60s linear infinite;
+    -moz-animation: moveCloud 60s linear infinite;
+}
+#cloud2 {
+    z-index: 2;
+    position: absolute;
+    left:-20px;
+    top:2em;
+    font-size: 1em;
+    font-weight: 900;
+    color: #666;
+    animation-delay:7s;
+    -webkit-animation-delay:7s;
+    -moz-animation-delay: 7s;
+    animation: moveCloud 50s ease-in-out infinite;
+    -webkit-animation: moveCloud 50s ease-in-out infinite;
+    -moz-animation: moveCloud 50s ease-in-out infinite;
+}
+#cloud3 {
+    z-index: 1;
+    position: absolute;
+    left:-50px;
+    bottom:.5em;
+    font-size: 2.5em;
+    color: #a8e4ec;    
+    animation: moveCloud 55s ease-out infinite;
+    -webkit-animation: moveCloud 55s ease-out infinite;
+    -moz-animation: moveCloud 55s ease-out infinite;
+}
+#cloud4 {
+    z-index: 2;
+    position: absolute;
+    left:-10px;
+    top:3em;
+    font-size: 2em;
+    font-weight: 900;
+    color: #999;
+    animation-delay:1s;
+    -webkit-animation-delay:1s;
+    -moz-animation-delay: 1s;
+    animation: moveCloud 50s ease-in-out infinite;
+    -webkit-animation: moveCloud 50s ease-in-out infinite;
+    -moz-animation: moveCloud 50s ease-in-out infinite;
+}
+#cloud5 {
+    z-index: 2;
+    position: absolute;
+    left:-60px;
+    top:2.8em;
+    font-size: 2.5em;
+    font-weight: 900;
+    color: #bababa;
+    animation: moveCloud 70s ease-out infinite;
+    -webkit-animation: moveCloud 70s ease-out infinite;
+    -moz-animation: moveCloud 70s ease-out infinite;
+}
+#cloud6 {
+    z-index: 2;
+    position: absolute;
+    left:-40px;
+    top:0.5em;
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #cacaca;
+    animation-delay:4s;
+    -webkit-animation-delay:4s;
+    -moz-animation-delay: 4s;
+    animation: moveCloud 55s ease-in infinite;
+    -webkit-animation: moveCloud 55s ease-in infinite;
+    -moz-animation: moveCloud 55s ease-in infinite;
+}
+    .bg{
+    background-color: #000;
+    /*width:100%;*/
+    height: 100%;
+    color :#FFF;
+   /*background-image: url("./images/backg_page.jpg"); */
+    background-image: url("./images/backg_page.jpg");
+   }
+   .menu{
+        z-index: 1;
+        color: #FFF;
+        height: 47px;
+        position: fixed;
+        margin-top: 11%;
+        padding: 0;
+        width: 100%;
+        background-color: #00134d;
+       }
+   .pos{
+        margin-top: 50%;
+        }
+    .posmenu{
+        margin-left: 7%;
+        text-shadow: h5;
+        text-decoration: none;
+        }
+      .posmenu1{
+        margin-left: 7%;
+        text-decoration: none;
+        }
+   .posmenu1 a:link {
+  text-decoration: none;
+  color: #FFF;
+}
+   .posmenu1 a {
+  text-decoration: none;
+  color: #FFF;
+}
+   .lef{
+        font-size: 22px; 
+        font-family: 'Bad Script', cursive;    
+        margin-left: 1%/*29%/;
+        padding:0; 
+        font-family: 'Bad Script', cursive;    
+        }
+   .lef1{
+        margin-top: 25%;
+        margin-left: 29%;
+        padding:0;     
+        }
+   .lef2{
+        margin-top: 30%;
+        margin-left: 20%;
+        padding:0; 
+        font-family: 'Bad Script', cursive;
+        font-size: 20px;    
+        }
+     .lef3{
+        margin-top: 50%;
+        margin-left: 5%;
+        padding:0; 
+        font-family: 'Bad Script', cursive;
+        font-size: 22px;
+        text-align: center;
+            
+        }
+        .lef4{
+        margin-top: 50%;
+        margin-left: 10%;
+        padding:0; 
+        font-family: 'Bad Script', cursive;
+        font-size: 18px;
         
-	border-radius: 5%;
+            
+        }
+     .lef5{
+            margin-left: 50%;
+        }
+     .present{
+          display: flex;
+          } 
+     /* reset our lists to remove bullet points and padding */
+/*.posmenu1, .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;*/
 }
-body  { /** @ Media Queries **/
-                     /** background-color: #000; **/
-                     width: 1024px;
-                     /**background-image: url("./images/tire_performance_bkg.jpeg");**/
-                     /**height: 700px;**/
-                     }
-#montre:hover {
-	transform:scale(2.1) /*scale(1.1)*/;
-        z-index : 1;
-}
- #montre1 {
-                      /*text-align: left;*/
-                    /* margin-bottom: 50%;*/
-                     margin-left: 4%;
-                    /**display: flex;
-                     justify-content : space-around; **/
-                    }
- #montre1 a{
-                     margin-left:2%; 
-                     color: seashell;
-                     font-family: Arial;
-                     font-size: 15px;  
-                     text-decoration: none;  
-                     /**padding: 20px; **/
-                    }
-  header{ /** @ Media Queries **/
-                     /*display: flex;
-	                 flex-wrap: wrap;**/
-                     background-color: #000;
-                     width: 1920px;
-                     position: fixed;
-                     z-index: 1;
-                     /**height: 700px;**/
-                     /*margin-bottom: 25%;*/
-                     }
-#pos{
-                margin-top: 10%;
-                
-            }
- pos1{
-                margin-top: 15%;
-                margin-left: 25%;
-            }
-.container { /* define grid container*/
-  display: grid;
-  max-width: 900px;   
-  position: relative;
-  /*margin: auto;*/
-  margin-left: 20%;
-  margin-top: 5%
-  grid-gap: 10px;
-  grid-template: repeat(9, /**1fr**/135px)/*height*/ / repeat(6, /**1fr**/180px)/*width*/;
-}
-@media only screen and (max-width: 768px) {
-  /* For mobile phones:width less than 768 px, breakpoint  */
-  .container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-h1, h2, h3 {
-  font-family: monospace;
-  text-align: center;
-}
-
-header { /* define grid header*/
-    display: flex;
-  background-color: /**dodgerblue beige**/ #000066;
-  grid-area:1 /  2/ 7 /*1 / 1 / 2 / 7*/;
-  text-align: center;
-  border-radius: 15px;
-  color: #fff;
-   
-}
-@media only screen and (max-width: 768px) {
-  /* For mobile phones:  width less than 768 px, breakpoint */
-  header {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-
 nav { /* define grid nav*/
   background-color: #ccd9ff;
   grid-area: 2 / 1 / 2 / 7;
-  text-align: justify;
+  text-align: center;
   border-radius: 15px;
-  margin-left: !5%;
-  
+  text-decoration: none;
 }
 
 .left {/* define grid left*/
-  background-color: #00004d/*#ccd9ff*/;
+  background-color: #ccd9ff;
   grid-area: 3 / 1 / 6/ 3;
   text-align: center;
   border-radius: 15px;
   }
-
-.right { /* define grid right*/
-  background-color: #00004d;
-  grid-area: 3 / 3 / 6 / 7;
-  margin-top: 0px;
-  text-align: center;
-  border-radius: 15px;
-  color: #fff;
-  font-family: Arial;
-  font-size: 16px;
-  padding: 5px;
-  overflow: scroll;
-}
-.pos{ /* define position and text colour*/
-    text-align: center;
-    color: #fff;
-    margin-left: 10%;
-}
-video { /* define video area*/
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-.overlap { /* grid define over other grid, but really tiny, we are not gonna use it*/
-  background-color: #000;
-  grid-area: 4 / 4 / 6 / 6;
-  z-index: 5;
-  border-radius: 10px;
-  color: #fff;
-  font-family: Arial;
-  font-size: 14px;
-}
-
-footer { /* define grid footer*/
-  background-color:#00004d; /*#ccd9ff;*/
-  grid-area: 6/ 1 / 7 / 7;
-  /*text-align: center;*/
-  border-radius: 15px;
-  text-decoration: underline;
-  margin-left: 33.5%;
-  height: 50px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 2%;
-  padding-top: 10%;
-}
-figure {
-     display: flex;
-}
-.typ{ /*format text different colour and type*/
-     font-family: 'Bad Script', cursive;
-     font-size: 50px;
-     color: #d9f906;
-     margin-left: 15%;   
-     }
-#demo{
-      color: #d9f906;
-            }
-#demo1{
-       color: #d9f906;         
-            }
-#demo2{
-       color: #d9f906;         
-            }
-.typ1{/*format text*/
+ .typ1{/*format text*/
      font-family: Arial;
      font-size: 18px;
-     color: #663300/*#d9f906*/;
-     margin-left: 25px;
-     text-justify: distribute;   
-     }
-.typ2 { /*format text different colour and type*/
-    font-family: 'Bad Script', cursive;
-    font-size: 30px;
-    color: #00004d /**#1a0d00**/;
-    margin-left: 25%;
-   }
-.typ3{ /*text appearance*/
-     font-family: Arial;
-     font-size: 18px;
-     color: #fff;
-     margin-left: 0px;
-     text-justify: distribute;
-     text-decoration: none;   
-     }
-img{    /* define the border of the image */
-    border-radius: 7px;
-    
+     color: #663300;
+     /*margin-left: 15px
+     text-justify: distribute;*/
+     text-align: justify;
+     text-decoration: none;
+     margin-top: 105px; 
+     }       
+.select {
+    background-color: #fff;   /* active link */
 }
-.align{  /* to format text and define position*/
-    text-align: center;
-    margin-left: 75px;
-}
-.align1{ /* to format text and define position*/
-    text-align: center;
-    margin-left: 85%;
-}
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: width less than 768 px, breakpoint  */
-  .align1 {
-    margin-left: 54%;
-  }
-}
-
-/* vertical menu css*/
-/* define a fixed width for the entire menu */
-.navigation {
-  width:100%;
-  
-}
-
-/* reset our lists to remove bullet points and padding */
-.mainmenu, .submenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+        
 
 /* make ALL links (main and submenu) have padding and background color */
 .mainmenu a {
@@ -267,11 +260,14 @@ img{    /* define the border of the image */
   text-decoration: none;
   padding: 10px;
   color: #000;
+  text-decoration: none;
+   margin-left: 2%;
+   border: 0;
 }
 
 /* add hover behaviour */
-.mainmenu a:hover {
-    background-color: #fff /*#C5C5C5*/;
+.posmenu1 a:hover {
+    text-decoration: none;
 }
 
 
@@ -280,10 +276,18 @@ img{    /* define the border of the image */
   we're changing the submenu's max-height from 0 to 200px;
 */
 
-.mainmenu li:hover .submenu {
+.posmenu1 li:hover .submenu {
   display: block;
-  max-height: 280px;
+  max-height: 480px;
+  text-decoration: none;
 }
+ .mainmenu li:hover .submenu {
+  display: block;
+  max-height: 615px;
+  text-decoration: none;
+   
+}
+
 
 /*
   we now overwrite the background-color for .submenu links only.
@@ -292,11 +296,14 @@ img{    /* define the border of the image */
 
 .submenu a {
   background-color: #999;
-}
+  text-decoration: none;
+ 
+  }
 
 /* hover behaviour for links inside .submenu */
 .submenu a:hover {
   background-color: #666;
+  text-decoration: none;
 }
 
 /* this is the initial state of all submenus.
@@ -306,75 +313,122 @@ img{    /* define the border of the image */
   overflow: hidden;
   max-height: 0;
   -webkit-transition: all 0.5s ease-out;
+  margin-left: 2%;
+  border: 0;
+  text-align: justify;
 }
-.select {
-    background-color: #fff;   /* active link */
+ 
+ .voir{
+    display: block;
+ }
+ .navigation {
+  width:100%;
 }
-        </style>
-<link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
-	<!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+ .justify-image{ text-align: justify;}
+.justify-image img{display:inline-block;}
+/*.justify-image:after{content:""; display: inline-block; width: 100%; height: 0;}*/
+    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+    <!-- À ajouter pour utiliser les icones FontAwesome, lien CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 </head>
 <body>
-     <header>
-      <figure>
-              <img src="./images/performance_tire2.jpg" Title="Performance Tire" width="500px" height="180px" >
-              <figcaption class="typ"><b>Performance Tire</b><br>  
-</figcaption>
-           </figure>
-              
-    </header>
+    <!-- Notre fameux conteneur de l'animation -->
+    <div id="contentCloud">
+        <!-- fichier index.html -->
+<div id="contentCloud">
+  <div id="sun"></div>
+  <i id="cloud1" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud2" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud3" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud4" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud5" class="fa fa-cloud" aria-hidden="true"></i>
+  <i id="cloud6" class="fa fa-cloud" aria-hidden="true"></i>
+</div>
+    </div><!-- fin contentCloud-->
+    <div class="jumbotron1 text1-center menu">
+  <span class="posmenu1"><a href="#"><b>Famille MATCHENDEM</b></a></span>
+  <span class="posmenu1"><a href="#">Baham notre Village</a></span>
+  <span class="posmenu1"><a href="#">Lieux Sacres</a></span>
+  <span class="posmenu1"><a href="#">Fovu</a></span><!--sous menu-->
+  </span>
+  <span class="posmenu1"><a href="ARBRE_GENEALOGIQUE_Matchuendem.pdf">L'arbre Genealogique</a></span>
+  <span class="posmenu1"><a href="#">Apprenons le Homlah</a></span><br>
+  <span class="posmenu1"></span>
+  </span>
+  </div><!-- fin jumbontron1 menu-->
+<!-- debut bootstrap -->
 <div class="container">
-     <section class="left">
-      <h2><span id="demo2">HOME</span></h2>
+<div class="row, bg"><!-- debut Menu -- mettre le background image ici-->
+<figure>
+  <img class="lef" src="./images/backg_page.jpg" style="height:575px width= 100%" title="For my background page">
+  <!--<figcaption >Patrick for my Portfolio</figcaption>-->
+  </figure> 
+  </div> <!-- fin Menu-->
+  <div class="row">
+    <div class="col-sm-7, lef">
+      <!--<h3 class="lef">Column 1</h3>-->
+      <br><br><p></p>
+      <p class="lef"><span class="lef"><b></b></span></p>
+      <span class="lef"> <!--<h2>My projects</h2>--></span>
+       <!-- test test test test test  test test test test test  test test test test test -->
+         <section class="left">
+      <h2><span class="typ1">Grande Famille</span></h2>
         <br>
         <nav class="navigation">
   <ul class="mainmenu">
-    <li><a href="#"><span class="typ1"><b class="typ1">Tires</b></span></a></li>
-    <li><a href="#"><span class="typ1"><b>Oil Change</b></span></a></li>
-    <li><a href="#"><span class="typ1"><b>Mechanic</b></span></a></li>
-    <li><a href="#"><span class="typ1"><b>Towing</b></span></a></li>
+    <!--<li><span class="typ1"><b class="select"></b></span></li>
+    <li><a href="calendar.html"><span class="typ1"><b>My Calendar</b></span></a></li>-->
+    <li><span class="typ1"><b class="select">Grands/Arrieres Parents</b></span></a></a>
       <ul class="submenu">
-        <li><a href="#"><span class="typ1">Trucks</span></a></li>
-        <li><a href="#"><span class="typ1">Regular Cars</span></a></li>
+        <li><a href="index.html"><span class="typ1">FODOUOP(Epse:NGAINGNE)</span></a></li><title> a program develop with java</title>
+        <li><a href="index.html"><span class="typ1">SOUOGUEM(Epse:DJOKO CHACMOU</span></a></li>
+        <li><a href="index.html"><span class="typ1">YOUOVOP</span></a></li>
+        <li><a href="index.html"><span class="typ1">MOTSEBO</span></a></li>
+        <li><a href="index.html"><span class="typ1">OUAMBO Joseph</span></a></li>
+         <li><a href="index.html"><span class="typ1">WAKEU</span></a></li>
+        <!--<li><a href="https://patkloe.github.io/guessing_games/"><span class="typ1">Html/Css/Js/Bootstrap</span></a></li>
+        <li class="justify-image"><a href="https://patkloe.github.io/Yelp_App1/"><img  title="React" src="./images/react.jpg" width="19" height="28"><span class="typ1">React</span></a></li>
+        <li class="justify-image"><a href="vue_pict.html"><img  title="Vue" src="./images/vue.jpg" width="19" height="28"><span class="typ1">Vue</span></a></li>
+      <!-- <li><a href="coming_soon.html"><span class="typ1">Angular.js</span></a></li> 
+        <li class="justify-image"><a href="https://patkloe.github.io/Angular-Motsebo/"><img  title="Angular" src="./images/angular.jpg" width="19" height="28"><span class="typ1">Angular</span></a></li>
+        <li><a href="coming_soon.html"><span class="typ1">Js/flask/sqlite/ajax</span></a></li>-->
+        
+         
       </ul>
     </li>
-      <li><a href="#"><span class="typ1"><b class="typ1">Body Repair</b></span></a></li> <!-- use class "select" when the page is loaded-->
-      <li><a href="#"><span class="typ1"><b class="typ1">Junk Cars</b></span></a></li>
-      <!--<li><a href="#"><span class="typ1"><b class="select">Junk Cars</b></span></a></li>-->
-      <!--<li><a href="#"><figure>
+     <!-- <li><a href="https://patkloe.github.io/"><figure>
              <span class="align"> <img src="./images/github_pict.png" Title="my github page" width="53" height="58" >
               <!--<figcaption class="typ1"><b>My Github page</b></figcaption>
-           </span></figure></a></li>-->
-    <li><a href="mailto:motsebo@gmail.com?Subject=Hello"><span class="typ1"><b>Keep Connected</b></span></a></li>
+           </span></figure></a></li>
+    <li><a href="mailto:motsebo@gmail.com?Subject=Hello"><span class="typ1"><b>Keep Connected</b></span></a></li>-->
   </ul>
 </nav>
     </section>
-   <!-- <div class="overlap">
-      <h3>Overlap!</h3>
-        <br>
-I am a fullstack developer with 360 degree view on product development process, my main goal is to develop product that satisfy customer needs.<br>
-         that why I am focused on learning more and more to always improve the work I am doing. <br> My motivation is : nothing can stop you, use always strengh and tools you get to reach our goals.
-Practice Best practices, a web page must have the same rendering in every web navigator
-Always high motivated, looking for new challenges. Self learner.
+     <!--        
+       Focused on updating my skills to provide Customer's satisfaction<br>
+      Please visit different pages to know more about Me.<br>
+        Patrick M</span>--></p>
+    </div>
+    <div class="col-sm-5">
+    <figure>
+  <img class="lef" src="./images/Patrick.jpg" title="Patrick, For my portfolio" style="width:768px" style="height:1024px ">
+  <figcaption ><u>® Patrick for my Portfolio 2020</u></figcaption>
+  </figure>
+    </div>
+    <!-- <div class="col-sm-4">
+      <h3>Column 3</h3>        
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div> -->
-    <section class="right">
-        <p id="demo"></p>
-        <script>
-var d = new Date();
-document.getElementById("demo").innerHTML = d;
-</script>
-      <!--<h2>OUR JUNK CARS</h2>-->
-      <img src="./images/tire_performance_bkg.jpeg" Title="Performance Tire" width="525px" height="725px" >
-     </section>
-      <footer>
-      <br><br><br><br>
-     <u id="demo1">&copy;Performance Tire 2020</u>
-        <a href="https://api.whatsapp.com/send?phone=237695687792"><img src="./images/Logo/whatsapp.jpg" title="Contactez nous sur whatsapp" style="width:80px;height:40px;"></a>
-            <a href="#"><img src="./images/Logo/google.png" title="Google link" style="width:80px;height:40px;"></a>
-            <a href="#"><img src="./images/Logo/facebook.png" title="Our facebook page" style="width:80px;height:40px;"></a>
-            <a href="#"><img src="./images/Logo/pinterest.png" title="On Pinterest" style="width:80px;height:40px;"></a>
-    </footer>
-  </div> <!-- fin container-->
+  </div>
+</div>
 </body>
-
 </html>
